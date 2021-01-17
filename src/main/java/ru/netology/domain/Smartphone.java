@@ -17,6 +17,10 @@ public class Smartphone extends Product {
         super();
     }
 
+    public boolean matches(String search) {
+        return super.matches(search) || producer.equalsIgnoreCase(search);
+    }
+
     public Smartphone(int id, String name, int price, String producer) {
         super(id, name, price);
         this.producer = producer;
